@@ -1,0 +1,21 @@
+class Solution {
+public:
+    int missingNumber(vector<int>& nums) {
+        int size=nums.size();
+        int x=0,y=0;
+        while(x<size){
+            if(nums[y]==x){
+                x++;
+                y=0;
+                continue;
+            }
+            else if(y==size-1){
+                return x;
+            }
+            y++;
+
+
+        }
+        return x;
+    }
+};
