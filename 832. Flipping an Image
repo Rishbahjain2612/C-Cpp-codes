@@ -1,0 +1,21 @@
+class Solution {
+public:
+    vector<vector<int>> flipAndInvertImage(vector<vector<int>>& image) {
+        vector<vector<int>> flip;
+        int size = image[0].size();
+        for(int i=0;i<size;i++){
+            vector<int> temp;
+            for(int j=size-1;j>=0;j--){
+                
+                if(image[i][j]==0){
+                    temp.push_back(1);
+                }
+                else{
+                    temp.push_back(0);
+                }
+            }
+            flip.push_back(temp);
+        }
+        return flip;
+    }
+};
